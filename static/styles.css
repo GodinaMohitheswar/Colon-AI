@@ -1,0 +1,479 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e3a8a;
+    color: #333;
+    padding-top: 80px;
+    background: url('/static/images/2.webp') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.text-center { text-align: center; }
+.text-gray-600 { color: #718096; }
+.text-gray-800 { color: #2d3748; }
+
+.text-4xl { font-size: 2.25rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-2xl { font-size: 1.5rem; }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    color: black;
+    position: fixed;
+    width: calc(100% - 40px);
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.navbar nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: background 0.3s;
+}
+
+.navbar nav a:hover { background: #e2e8f0; }
+
+/* Logo */
+.navbar .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Primary Button */
+.btn-primary {
+    display: inline-block;
+    background-color: #1e40af;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover { background-color: #2563eb; }
+
+.faq-container {
+    margin-top: 20px;
+    max-width: 100%; /* Make sure it fills the section width */
+}
+
+.faq-item {
+    background: rgba(0, 0, 0, 0.2); /* Glass effect */
+    backdrop-filter: blur(10px);
+    padding: 4px 8px;
+    border-radius: 100px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.5)
+}
+
+.faq-item button {
+    background-color: transparent !important;
+    outline: none !important;
+    border: none;
+    color: #ffffff;
+    font-weight: none;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: left;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.faq-item.active {
+    background-color: rgba(255, 255, 255, 1) !important; /* Fully white */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 100px;
+}
+
+.faq-item.active button {
+    color: black; /* Keep text black when active */
+}
+
+.faq-answer {
+    display: none;
+    padding: 4px;
+    color: black;
+    font-size: 1rem;
+    line-height: 1;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    width: 100%;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+
+
+/* Section Container */
+.section-container {
+    max-width: 1000px;
+    margin: 0px auto;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: rgba(135, 206, 235, 0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    width: 100%;
+    margin: 60px auto;
+}
+
+.section-container h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+.section-container p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.8;
+}
+
+/* Team Section */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 20px;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    transition: transform 0.3s ease-in-out;
+}
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.team-member img {
+    width: 100px;
+    height: 130px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-info h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+}
+
+.social-links {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.social-links a img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s;
+    border-radius: 0;
+}
+
+.social-links a:hover img {
+    transform: scale(1.1);
+}
+
+.team-info p {
+    color: #555;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+    .team-member {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .team-member img {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding-top: 0;
+}
+
+.contact-info,
+.contact-form {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: #1e40af;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    border: none;
+}
+
+.contact-form button:hover { background-color: #2563eb; }
+
+.contact-info a {
+    color: #1e40af;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+/* Prediction and Result Boxes Styling */
+.predict-form, .result-box {
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Uploaded Image Styling */
+.uploaded-img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styling */
+button {
+    background-color: #1e40af;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+/* Prediction Container */
+.predict-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding-top: 0px;
+}
+
+/* Individual Box Styling for Prediction Info, Form, and Results */
+.predict-info, .predict-form, .result-box {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Input Field Styling in the Prediction Form */
+.predict-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Button Styling Inside the Prediction Form */
+.predict-form button {
+    background-color: #1e40af;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    border: none;
+}
+
+.predict-form button:hover {
+    background-color: #2563eb;
+}
+
+/* Uploaded Image Styling (Again, For Consistency) */
+.uploaded-img {
+    margin-top: 15px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    margin-top: 2rem;
+    width: calc(100% - 40px);
+    color: black;
+    border-radius: 20px;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    opacity: 0.8;
+    transform: translateX(2px);
+}
+
+footer img {
+    width: 20px;
+    height: 20px;
+}
+
+footer .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    footer .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

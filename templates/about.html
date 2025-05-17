@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | WCE Curated Colon Disease Detection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="{{ url_for('index') }}" class="logo">Colon AI</a>
+            <nav>
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('predict') }}">Predict</a>
+                <a href="{{ url_for('about') }}">About</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section-container" style="background-color: rgba(135, 206, 235, 0.4); padding: 40px 20px; border-radius: 20px; backdrop-filter: blur(15px); max-width: 90%; width: 100%; margin: 30px auto;">
+        <h2>Meet Our Team</h2>
+        <p>Our team is dedicated to advancing AI technology for colon disease detection, providing efficient and accurate solutions.</p>
+    
+        <section class="team-container">            
+            <div class="team-member">
+                <img src="/static/images/Photo.jpg" alt="G Mohitheswar">
+                <div class="team-info">
+                    <h3>G Mohitheswar</h3>
+                    <div class="social-links">
+                        <a href="mailto:mohitheswargodina@gmail.com"><img src="/static/images/gmail.png" alt="Gmail"></a>
+                        <a href="https://github.com/GodinaMohitheswar" target="_blank"><img src="/static/images/github.png" alt="GitHub"></a>
+                        <a href="https://www.linkedin.com/in/godina-mohitheswar" target="_blank"><img src="/static/images/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                    <p>Expert in AI, ML & Web for various applications.</p>
+                </div>
+            </div>    
+        </section>
+    </section>
+    
+    <footer class="w-full bg-white/30 backdrop-blur-md shadow-md rounded-2xl mx-auto py-6 px-14 mt-10 mb-6 max-w-7xl p-6 flex flex-col justify-center"> 
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+            <!-- Brand Name & Description -->
+            <div class="flex flex-col items-center md:items-center justify-start">
+                <a href="{{ url_for('index') }}" class="font-albra text-xl md:text-3xl font-bold text-black tracking-wide transition-transform duration-300 hover:scale-105">Colon AI</a>
+                <p class="text-center text-sm mt-2">AI-powered colon disease detection for accurate diagnosis.</p>
+            </div>
+            
+            <!-- Useful Links -->
+            <div class="flex flex-col items-center md:items-center justify-start">
+                <div class="font-medium text-xl mb-3">Useful Links</div>
+                <div class="flex flex-col gap-2">
+                    <a class="text-black text-sm transition-transform duration-300 hover:scale-105" href="{{ url_for('predict') }}">Prediction</a>
+                    <a class="text-black text-sm transition-transform duration-300 hover:scale-105" href="{{ url_for('about') }}">About Us</a>
+                    <a class="text-black text-sm transition-transform duration-300 hover:scale-105" href="{{ url_for('contact') }}">Contact Us</a>
+                </div>
+            </div>
+            
+            <!-- Contact Details -->
+            <div class="flex flex-col items-center md:items-start text-sm justify-start">
+                <div class="font-medium text-xl mb-3">Contact</div>
+                <a class="flex items-center gap-2 text-black transition-transform duration-300 hover:scale-105 mb-3" href="mailto:contact.colonai@gmail.com">
+                    <img alt="" loading="lazy" width="20" height="20" src="/static/images/mail.svg" />contact.colonai@gmail.com
+                </a>
+                <a class="flex items-center gap-2 text-black transition-transform duration-300 hover:scale-105 mb-3" href="tel:+917702662107">
+                    <img alt="" loading="lazy" width="20" height="20" src="/static/images/phone.svg" />+91 7702662107
+                </a>
+                <a class="flex items-start gap-2 text-black transition-transform duration-300 hover:scale-105" href="https://maps.app.goo.gl/JL6WUgje3MEurLmGA" target="_blank" rel="noopener noreferrer">
+                    <img alt="" loading="lazy" width="20" height="20" src="/static/images/pin.svg" />
+                    <div class="flex flex-col">
+                        <span>Pulivendula, Andhra Pradesh</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="border-t text-black py-6 text-center mt-6">
+            <p class="pl-4">© Colon AI 2025 | All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>
